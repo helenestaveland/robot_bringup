@@ -24,10 +24,13 @@
       /vectornav_driver_node/sync_out_stamp
 
       /cam_front/image_raw/compressed
+      /cam_front/image_raw/compressed_exposure_time
       /cam_front/synchronized/image_raw/compressed
       /cam_left/image_raw/compressed
+      /cam_left/image_raw/compressed_exposure_time
       /cam_left/synchronized/image_raw/compressed
       /cam_right/image_raw/compressed
+      /cam_right/image_raw/compressed_exposure_time
       /cam_right/synchronized/image_raw/compressed
 
       /d455/color/image_raw/compressed
@@ -56,6 +59,9 @@
       /msf_core/VN100_odometry
       /msf_core/pose
 
+      /mavros/estimator_status
+      /mavros/extended_state
+
       /mavros/battery
       /mavros/esc_info
       /mavros/esc_status
@@ -73,6 +79,8 @@
       /mavros/global_position/set_gp_origin
       /mavros/gpsstatus/gps1/raw
       /mavros/gpsstatus/gps1/rtk
+      /mavros/gpsstatus/gps2/raw
+      /mavros/gpsstatus/gps2/rtk
       /mavros/imu/data
       /mavros/imu/data_raw
       /mavros/imu/diff_pressure
@@ -83,6 +91,11 @@
       /mavros/local_position/accel
       /mavros/local_position/odom
       /mavros/local_position/pose
+      /mavros/local_position/pose_cov
+      /mavros/local_position/velocity_body
+      /mavros/local_position/velocity_body_cov
+      /mavros/local_position/velocity_local
+
       /mavros/rc/in
       /mavros/rc/out
       /mavros/rc/override
@@ -103,6 +116,13 @@
       /mavros/setpoint_velocity/cmd_vel
       /mavros/setpoint_velocity/cmd_vel_unstamped
       /mavros/state
+
+      /mavros/statustext/recv
+      /mavros/statustext/send
+      /mavros/time_reference
+      /mavros/timesync_status
+      /mavros/vision_pose/pose
+      /mavros/vision_pose/pose_cov
 
       /qualisys/theseus/odom
       /qualisys/theseus/pose
@@ -127,6 +147,8 @@
       /vis/sampler
       /vis/shortest_paths
       /vis/manhole_traversal_path
+      /vis/local_navigation_goals
+      /freespace_pointcloud
       /pci_command_trajectory_vis
       /gbp_time_log
       /stable_detections_vis
