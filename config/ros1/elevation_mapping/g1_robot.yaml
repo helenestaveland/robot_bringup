@@ -1,0 +1,23 @@
+input_sources:
+  mimosa_cloud:
+    type: pointcloud
+    topic: /mimosa_node/lidar/geometric/sm_cloud_ds
+    queue_size: 1
+    publish_on_update: true
+    sensor_processor:
+      type: perfect
+
+map_frame_id: "map"
+
+robot_base_frame_id: "mimosa_body"
+
+# Leave empty because MIMOSA already provides the robot pose through TF.
+robot_pose_with_covariance_topic: ""
+
+robot_pose_cache_size: 200
+
+# Keep the local elevation map centered on the robot.
+track_point_frame_id: "mimosa_body"
+track_point_x: 0.0
+track_point_y: 0.0
+track_point_z: 0.0
