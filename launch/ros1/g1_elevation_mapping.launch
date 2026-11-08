@@ -1,0 +1,23 @@
+<launch>
+
+  <node pkg="elevation_mapping"
+        type="elevation_mapping"
+        name="elevation_mapping"
+        output="screen">
+
+    <rosparam command="load"
+              file="$(find robot_bringup)/config/ros1/elevation_mapping/g1_robot.yaml" />
+
+    <rosparam command="load"
+              file="$(find robot_bringup)/config/ros1/elevation_mapping/g1_map.yaml" />
+
+    <!-- Fill unknown holes and generate elevation_inpainted. -->
+    <rosparam command="load"
+              file="$(find elevation_mapping_demos)/config/postprocessing/postprocessor_pipeline.yaml" />
+
+    <!-- GBPlanner subscribes to /elevation_map. -->
+    <remap from="elevation_map" to="/elevation_map" />
+
+  </node>
+
+</launch>
