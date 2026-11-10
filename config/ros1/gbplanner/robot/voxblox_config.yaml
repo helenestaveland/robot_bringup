@@ -1,7 +1,7 @@
 ### PLANNING (GBPLANNER) RELATED ###
 occupancy_distance_voxelsize_factor: 1.0 #0.5 #ANYmal:1.0 #Flyab:0.5 # must set "occupancy_min_distance_voxel_size_factor" the same
 
-world_frame: world
+world_frame: map
 use_tf_transforms: True
 use_freespace_pointcloud: True
 tsdf_voxels_per_side: 16 # Size of the block in voxblox
